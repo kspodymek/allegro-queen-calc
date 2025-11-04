@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        profit: {
+          DEFAULT: "hsl(var(--profit))",
+          foreground: "hsl(var(--profit-foreground))",
+        },
+        cost: {
+          DEFAULT: "hsl(var(--cost))",
+          foreground: "hsl(var(--cost-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

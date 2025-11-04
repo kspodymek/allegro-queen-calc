@@ -54,16 +54,32 @@ const PriceCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-foreground">Kalkulator Cen Królowej Allegro</h1>
-          <p className="text-muted-foreground">Oblicz optymalne ceny dla swoich produktów na Allegro</p>
+    <div className="min-h-screen bg-gradient-bg py-8 px-4 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      
+      <div className="max-w-4xl mx-auto space-y-6 relative z-10">
+        <div className="text-center space-y-4 animate-fade-in">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <span className="text-6xl animate-float">👑</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-title bg-clip-text text-transparent">
+            Kalkulator Cen
+          </h1>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-title bg-clip-text text-transparent">
+            Królowej Allegro
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Oblicz optymalne ceny dla swoich produktów na Allegro z uwzględnieniem prowizji i marży
+          </p>
         </div>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Dane produktu</CardTitle>
+        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2">
+          <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
+            <CardTitle className="text-2xl flex items-center gap-2">
+              <span>📊</span> Dane produktu
+            </CardTitle>
             <CardDescription>Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -97,10 +113,12 @@ const PriceCalculator = () => {
 
             {calculations && (
               <div className="pt-4 border-t">
-                <div className="bg-muted rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-semibold text-foreground">Cena Brutto (Twój koszt):</span>
-                    <span className="text-2xl font-bold text-cost">{formatCurrency(calculations.grossCost)}</span>
+                <div className="bg-gradient-to-r from-cost/10 to-cost/5 rounded-lg p-5 border-2 border-cost/20">
+                  <div className="flex justify-between items-center flex-wrap gap-2">
+                    <span className="text-lg font-semibold text-foreground flex items-center gap-2">
+                      <span>💰</span> Cena Brutto (Twój koszt):
+                    </span>
+                    <span className="text-3xl font-bold text-cost">{formatCurrency(calculations.grossCost)}</span>
                   </div>
                 </div>
               </div>
@@ -109,9 +127,11 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Scenariusze cenowe</CardTitle>
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2">
+            <CardHeader className="bg-gradient-to-r from-profit/5 to-primary/5">
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <span>📈</span> Scenariusze cenowe
+              </CardTitle>
               <CardDescription>Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
             </CardHeader>
             <CardContent>
@@ -127,11 +147,11 @@ const PriceCalculator = () => {
                   </TableHeader>
                   <TableBody>
                     {calculations.scenarios.map((scenario, index) => (
-                      <TableRow key={index}>
-                        <TableCell className="font-medium">{scenario.markupLabel}</TableCell>
-                        <TableCell className="font-semibold">{formatCurrency(scenario.allegroPrice)}</TableCell>
-                        <TableCell className="text-cost">{formatCurrency(scenario.commissionPln)}</TableCell>
-                        <TableCell className="text-profit font-semibold">{formatCurrency(scenario.profitPln)}</TableCell>
+                      <TableRow key={index} className="hover:bg-muted/50 transition-colors">
+                        <TableCell className="font-medium text-lg">{scenario.markupLabel}</TableCell>
+                        <TableCell className="font-bold text-lg">{formatCurrency(scenario.allegroPrice)}</TableCell>
+                        <TableCell className="text-cost font-semibold">{formatCurrency(scenario.commissionPln)}</TableCell>
+                        <TableCell className="text-profit font-bold text-lg">{formatCurrency(scenario.profitPln)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -142,10 +162,11 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card>
+          <Card className="shadow-lg border-2">
             <CardContent className="py-12">
-              <div className="text-center text-muted-foreground">
-                <p>Wprowadź cenę netto, aby zobaczyć obliczenia</p>
+              <div className="text-center text-muted-foreground space-y-3">
+                <span className="text-5xl block">🎯</span>
+                <p className="text-lg">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
               </div>
             </CardContent>
           </Card>

@@ -56,8 +56,9 @@ const PriceCalculator = () => {
   return (
     <div className="min-h-screen bg-gradient-bg py-8 px-4 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       
       <div className="max-w-4xl mx-auto space-y-6 relative z-10">
         <div className="text-center space-y-4 animate-fade-in">
@@ -75,8 +76,8 @@ const PriceCalculator = () => {
           </p>
         </div>
 
-        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2">
-          <CardHeader className="bg-gradient-to-r from-primary/5 to-accent/5">
+        <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-primary/30 backdrop-blur-sm bg-card/95">
+          <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
             <CardTitle className="text-2xl flex items-center gap-2">
               <span>📊</span> Dane produktu
             </CardTitle>
@@ -127,8 +128,8 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 border-2">
-            <CardHeader className="bg-gradient-to-r from-profit/5 to-primary/5">
+          <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-profit/30 backdrop-blur-sm bg-card/95">
+            <CardHeader className="bg-gradient-to-r from-profit/10 to-primary/10 border-b border-border">
               <CardTitle className="text-2xl flex items-center gap-2">
                 <span>📈</span> Scenariusze cenowe
               </CardTitle>
@@ -162,7 +163,7 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card className="shadow-lg border-2">
+          <Card className="shadow-2xl border-2 border-muted backdrop-blur-sm bg-card/95">
             <CardContent className="py-12">
               <div className="text-center text-muted-foreground space-y-3">
                 <span className="text-5xl block">🎯</span>

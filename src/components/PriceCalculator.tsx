@@ -56,10 +56,12 @@ const PriceCalculator = () => {
 
   return (
     <div className="min-h-screen bg-gradient-bg py-8 px-4 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Decorative bokeh elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-profit/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[hsl(45_95%_70%)]/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
       
       <div className="max-w-4xl mx-auto space-y-6 relative z-10">
         <div className="text-center space-y-4 animate-fade-in">

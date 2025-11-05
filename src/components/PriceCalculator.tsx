@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Crown, BarChart3, DollarSign, TrendingUp, Target } from "lucide-react";
 
 const PriceCalculator = () => {
   const [netPrice, setNetPrice] = useState<string>("");
@@ -63,7 +64,10 @@ const PriceCalculator = () => {
       <div className="max-w-4xl mx-auto space-y-6 relative z-10">
         <div className="text-center space-y-4 animate-fade-in">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="text-6xl animate-float">👑</span>
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse" />
+              <Crown className="w-16 h-16 text-primary animate-float relative z-10" strokeWidth={2} />
+            </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-title bg-clip-text text-transparent">
             Kalkulator Cen
@@ -79,7 +83,7 @@ const PriceCalculator = () => {
         <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-primary/30 backdrop-blur-sm bg-card/95">
           <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
             <CardTitle className="text-2xl flex items-center gap-2">
-              <span>📊</span> Dane produktu
+              <BarChart3 className="w-6 h-6 text-primary" /> Dane produktu
             </CardTitle>
             <CardDescription>Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
           </CardHeader>
@@ -117,7 +121,7 @@ const PriceCalculator = () => {
                 <div className="bg-gradient-to-r from-cost/10 to-cost/5 rounded-lg p-5 border-2 border-cost/20">
                   <div className="flex justify-between items-center flex-wrap gap-2">
                     <span className="text-lg font-semibold text-foreground flex items-center gap-2">
-                      <span>💰</span> Cena Brutto (Twój koszt):
+                      <DollarSign className="w-5 h-5 text-cost" /> Cena Brutto (Twój koszt):
                     </span>
                     <span className="text-3xl font-bold text-cost">{formatCurrency(calculations.grossCost)}</span>
                   </div>
@@ -131,7 +135,7 @@ const PriceCalculator = () => {
           <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-profit/30 backdrop-blur-sm bg-card/95">
             <CardHeader className="bg-gradient-to-r from-profit/10 to-primary/10 border-b border-border">
               <CardTitle className="text-2xl flex items-center gap-2">
-                <span>📈</span> Scenariusze cenowe
+                <TrendingUp className="w-6 h-6 text-profit" /> Scenariusze cenowe
               </CardTitle>
               <CardDescription>Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
             </CardHeader>
@@ -166,7 +170,7 @@ const PriceCalculator = () => {
           <Card className="shadow-2xl border-2 border-muted backdrop-blur-sm bg-card/95">
             <CardContent className="py-12">
               <div className="text-center text-muted-foreground space-y-3">
-                <span className="text-5xl block">🎯</span>
+                <Target className="w-16 h-16 mx-auto text-muted-foreground/50" />
                 <p className="text-lg">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
               </div>
             </CardContent>

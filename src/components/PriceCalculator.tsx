@@ -55,39 +55,42 @@ const PriceCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-bg py-8 px-4 relative overflow-hidden">
-      {/* Decorative bokeh elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-profit/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '0.5s' }} />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-[hsl(45_95%_70%)]/25 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+    <div className="min-h-screen bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#0f0a1f] py-8 px-4 relative overflow-hidden">
+      {/* Water droplet bokeh elements */}
+      <div className="absolute top-[10%] left-[15%] w-32 h-32 bg-gradient-to-br from-pink-400/40 to-purple-600/40 rounded-full blur-2xl animate-float" />
+      <div className="absolute top-[20%] right-[20%] w-24 h-24 bg-gradient-to-br from-blue-400/50 to-cyan-500/50 rounded-full blur-xl animate-float" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute top-[60%] left-[10%] w-40 h-40 bg-gradient-to-br from-purple-500/35 to-pink-500/35 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-[15%] right-[15%] w-36 h-36 bg-gradient-to-br from-cyan-400/45 to-blue-600/45 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute top-[40%] right-[30%] w-28 h-28 bg-gradient-to-br from-pink-500/40 to-purple-400/40 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-[40%] left-[25%] w-20 h-20 bg-gradient-to-br from-blue-300/60 to-cyan-400/60 rounded-full blur-lg animate-float" style={{ animationDelay: '0.3s' }} />
+      <div className="absolute top-[30%] left-[40%] w-16 h-16 bg-gradient-to-br from-purple-400/50 to-pink-300/50 rounded-full blur-md animate-float" style={{ animationDelay: '1.8s' }} />
+      <div className="absolute bottom-[30%] right-[40%] w-44 h-44 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s' }} />
       
       <div className="max-w-4xl mx-auto space-y-6 relative z-10">
         <div className="text-center space-y-4 animate-fade-in">
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse" />
-              <Crown className="w-16 h-16 text-primary animate-float relative z-10" strokeWidth={2} />
+              <div className="absolute inset-0 bg-pink-500/30 blur-2xl rounded-full animate-pulse" />
+              <Crown className="w-20 h-20 text-white drop-shadow-[0_0_15px_rgba(236,72,153,0.8)] animate-float relative z-10" strokeWidth={2.5} />
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-title bg-clip-text text-transparent">
+          <h1 className="text-6xl md:text-7xl font-extrabold text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.8)] tracking-tight">
             Kalkulator Cen
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-title bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 drop-shadow-[0_2px_15px_rgba(0,0,0,0.6)]">
             Królowej Allegro
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto font-medium drop-shadow-[0_1px_10px_rgba(0,0,0,0.7)]">
             Oblicz optymalne ceny dla swoich produktów na Allegro z uwzględnieniem prowizji i marży
           </p>
         </div>
 
-        <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-primary/30 backdrop-blur-sm bg-card/95">
-          <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10 border-b border-border">
-            <CardTitle className="text-2xl flex items-center gap-2">
-              <BarChart3 className="w-6 h-6 text-primary" /> Dane produktu
+        <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-white/20 backdrop-blur-md bg-white/10">
+          <CardHeader className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-b border-white/10">
+            <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold">
+              <BarChart3 className="w-7 h-7 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" strokeWidth={2.5} /> Dane produktu
             </CardTitle>
-            <CardDescription>Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
+            <CardDescription className="text-gray-200 font-medium">Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
@@ -119,13 +122,13 @@ const PriceCalculator = () => {
             </div>
 
             {calculations && (
-              <div className="pt-4 border-t">
-                <div className="bg-gradient-to-r from-cost/10 to-cost/5 rounded-lg p-5 border-2 border-cost/20">
+              <div className="pt-4 border-t border-white/10">
+                <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-lg p-5 border-2 border-white/20">
                   <div className="flex justify-between items-center flex-wrap gap-2">
-                    <span className="text-lg font-semibold text-foreground flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-cost" /> Cena Brutto (Twój koszt):
+                    <span className="text-lg font-bold text-white flex items-center gap-2">
+                      <DollarSign className="w-6 h-6 text-pink-400 drop-shadow-[0_0_8px_rgba(244,114,182,0.6)]" strokeWidth={2.5} /> Cena Brutto (Twój koszt):
                     </span>
-                    <span className="text-3xl font-bold text-cost">{formatCurrency(calculations.grossCost)}</span>
+                    <span className="text-3xl font-extrabold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">{formatCurrency(calculations.grossCost)}</span>
                   </div>
                 </div>
               </div>
@@ -134,31 +137,31 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-profit/30 backdrop-blur-sm bg-card/95">
-            <CardHeader className="bg-gradient-to-r from-profit/10 to-primary/10 border-b border-border">
-              <CardTitle className="text-2xl flex items-center gap-2">
-                <TrendingUp className="w-6 h-6 text-profit" /> Scenariusze cenowe
+          <Card className="shadow-2xl hover:shadow-3xl transition-shadow duration-300 border-2 border-white/20 backdrop-blur-md bg-white/10">
+            <CardHeader className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-b border-white/10">
+              <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold">
+                <TrendingUp className="w-7 h-7 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]" strokeWidth={2.5} /> Scenariusze cenowe
               </CardTitle>
-              <CardDescription>Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
+              <CardDescription className="text-gray-200 font-medium">Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
-                      <TableHead className="font-semibold">Zakładany Zysk (Narzut)</TableHead>
-                      <TableHead className="font-semibold">Cena do wystawienia na Allegro</TableHead>
-                      <TableHead className="font-semibold">Pobrana Prowizja (15%)</TableHead>
-                      <TableHead className="font-semibold">Zysk (w zł)</TableHead>
+                    <TableRow className="border-white/10 hover:bg-white/5">
+                      <TableHead className="font-bold text-white">Zakładany Zysk (Narzut)</TableHead>
+                      <TableHead className="font-bold text-white">Cena do wystawienia na Allegro</TableHead>
+                      <TableHead className="font-bold text-white">Pobrana Prowizja (15%)</TableHead>
+                      <TableHead className="font-bold text-white">Zysk (w zł)</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {calculations.scenarios.map((scenario, index) => (
-                      <TableRow key={index} className="hover:bg-muted/50 transition-colors">
-                        <TableCell className="font-medium text-lg">{scenario.markupLabel}</TableCell>
-                        <TableCell className="font-bold text-lg">{formatCurrency(scenario.allegroPrice)}</TableCell>
-                        <TableCell className="text-cost font-semibold">{formatCurrency(scenario.commissionPln)}</TableCell>
-                        <TableCell className="text-profit font-bold text-lg">{formatCurrency(scenario.profitPln)}</TableCell>
+                      <TableRow key={index} className="hover:bg-white/10 transition-colors border-white/10">
+                        <TableCell className="font-bold text-lg text-white">{scenario.markupLabel}</TableCell>
+                        <TableCell className="font-extrabold text-xl text-white">{formatCurrency(scenario.allegroPrice)}</TableCell>
+                        <TableCell className="text-pink-400 font-bold drop-shadow-[0_0_5px_rgba(244,114,182,0.5)]">{formatCurrency(scenario.commissionPln)}</TableCell>
+                        <TableCell className="text-cyan-400 font-extrabold text-xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]">{formatCurrency(scenario.profitPln)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -169,11 +172,11 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card className="shadow-2xl border-2 border-muted backdrop-blur-sm bg-card/95">
+          <Card className="shadow-2xl border-2 border-white/20 backdrop-blur-md bg-white/10">
             <CardContent className="py-12">
-              <div className="text-center text-muted-foreground space-y-3">
-                <Target className="w-16 h-16 mx-auto text-muted-foreground/50" />
-                <p className="text-lg">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
+              <div className="text-center space-y-3">
+                <Target className="w-16 h-16 mx-auto text-purple-400 drop-shadow-[0_0_10px_rgba(192,132,252,0.6)]" strokeWidth={2.5} />
+                <p className="text-lg text-white font-bold">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
               </div>
             </CardContent>
           </Card>

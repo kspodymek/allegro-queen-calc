@@ -20,13 +20,13 @@ All colors MUST be HSL.
     --primary: 330 100% 68%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 258 100% 71%;
+    --secondary: 253 100% 72%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 95%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 197 89% 61%;
+    --accent: 195 89% 61%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -38,15 +38,15 @@ All colors MUST be HSL.
 
     --radius: 1.25rem;
     
-    --profit: 166 72% 55%;
+    --profit: 165 73% 55%;
     --profit-foreground: 0 0% 100%;
     
-    --cost: 25 100% 68%;
+    --cost: 23 100% 68%;
     --cost-foreground: 0 0% 100%;
     
-    --gradient-bg: linear-gradient(135deg, hsl(330 100% 68%) 0%, hsl(258 100% 71%) 20%, hsl(197 89% 61%) 40%, hsl(166 72% 55%) 60%, hsl(43 100% 73%) 80%, hsl(25 100% 68%) 100%);
-    --gradient-title: linear-gradient(90deg, hsl(330 100% 68%), hsl(258 100% 71%), hsl(197 89% 61%));
-    --gradient-button: linear-gradient(90deg, hsl(330 100% 68%), hsl(258 100% 71%));
+    --gradient-bg: linear-gradient(135deg, hsl(330 100% 68%) 0%, hsl(253 100% 72%) 20%, hsl(195 89% 61%) 40%, hsl(165 73% 55%) 60%, hsl(43 100% 73%) 80%, hsl(23 100% 68%) 100%);
+    --gradient-title: linear-gradient(90deg, hsl(330 100% 68%), hsl(253 100% 72%), hsl(195 89% 61%));
+    --gradient-button: linear-gradient(90deg, hsl(330 100% 68%), hsl(253 100% 72%));
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -71,13 +71,13 @@ All colors MUST be HSL.
     --primary: 330 100% 68%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 258 100% 71%;
+    --secondary: 253 100% 72%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 244 23% 20%;
     --muted-foreground: 0 0% 75%;
 
-    --accent: 197 89% 61%;
+    --accent: 195 89% 61%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -87,15 +87,15 @@ All colors MUST be HSL.
     --input: 244 23% 20%;
     --ring: 330 100% 68%;
     
-    --profit: 166 72% 55%;
+    --profit: 165 73% 55%;
     --profit-foreground: 0 0% 100%;
     
-    --cost: 25 100% 68%;
+    --cost: 23 100% 68%;
     --cost-foreground: 0 0% 100%;
     
-    --gradient-bg: linear-gradient(135deg, hsl(330 100% 68%) 0%, hsl(258 100% 71%) 20%, hsl(197 89% 61%) 40%, hsl(166 72% 55%) 60%, hsl(43 100% 73%) 80%, hsl(25 100% 68%) 100%);
-    --gradient-title: linear-gradient(90deg, hsl(330 100% 68%), hsl(258 100% 71%), hsl(197 89% 61%));
-    --gradient-button: linear-gradient(90deg, hsl(330 100% 68%), hsl(258 100% 71%));
+    --gradient-bg: linear-gradient(135deg, hsl(330 100% 68%) 0%, hsl(253 100% 72%) 20%, hsl(195 89% 61%) 40%, hsl(165 73% 55%) 60%, hsl(43 100% 73%) 80%, hsl(23 100% 68%) 100%);
+    --gradient-title: linear-gradient(90deg, hsl(330 100% 68%), hsl(253 100% 72%), hsl(195 89% 61%));
+    --gradient-button: linear-gradient(90deg, hsl(330 100% 68%), hsl(253 100% 72%));
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

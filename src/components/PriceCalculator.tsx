@@ -55,16 +55,16 @@ const PriceCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#0f0a1f] py-8 px-4 relative overflow-hidden">
-      {/* Water droplet bokeh elements */}
-      <div className="absolute top-[10%] left-[15%] w-32 h-32 bg-gradient-to-br from-pink-400/40 to-purple-600/40 rounded-full blur-2xl animate-float" />
-      <div className="absolute top-[20%] right-[20%] w-24 h-24 bg-gradient-to-br from-blue-400/50 to-cyan-500/50 rounded-full blur-xl animate-float" style={{ animationDelay: '0.5s' }} />
-      <div className="absolute top-[60%] left-[10%] w-40 h-40 bg-gradient-to-br from-purple-500/35 to-pink-500/35 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-[15%] right-[15%] w-36 h-36 bg-gradient-to-br from-cyan-400/45 to-blue-600/45 rounded-full blur-2xl animate-float" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute top-[40%] right-[30%] w-28 h-28 bg-gradient-to-br from-pink-500/40 to-purple-400/40 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-[40%] left-[25%] w-20 h-20 bg-gradient-to-br from-blue-300/60 to-cyan-400/60 rounded-full blur-lg animate-float" style={{ animationDelay: '0.3s' }} />
-      <div className="absolute top-[30%] left-[40%] w-16 h-16 bg-gradient-to-br from-purple-400/50 to-pink-300/50 rounded-full blur-md animate-float" style={{ animationDelay: '1.8s' }} />
-      <div className="absolute bottom-[30%] right-[40%] w-44 h-44 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s' }} />
+    <div className="min-h-screen bg-gradient-to-br from-[#0d0621] via-[#1a0b35] to-[#08041a] py-8 px-4 relative overflow-hidden">
+      {/* Water droplet bokeh elements - exact colors from reference image */}
+      <div className="absolute top-[10%] left-[15%] w-32 h-32 bg-[radial-gradient(circle,_#ec4899_0%,_#db2777_50%,_transparent_100%)] opacity-40 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-[20%] right-[20%] w-24 h-24 bg-[radial-gradient(circle,_#06b6d4_0%,_#0284c7_50%,_transparent_100%)] opacity-50 rounded-full blur-2xl animate-float" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute top-[60%] left-[10%] w-40 h-40 bg-[radial-gradient(circle,_#a855f7_0%,_#9333ea_50%,_transparent_100%)] opacity-35 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-[15%] right-[15%] w-36 h-36 bg-[radial-gradient(circle,_#22d3ee_0%,_#06b6d4_50%,_transparent_100%)] opacity-45 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute top-[40%] right-[30%] w-28 h-28 bg-[radial-gradient(circle,_#ec4899_0%,_#a855f7_50%,_transparent_100%)] opacity-40 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-[40%] left-[25%] w-20 h-20 bg-[radial-gradient(circle,_#3b82f6_0%,_#06b6d4_50%,_transparent_100%)] opacity-60 rounded-full blur-xl animate-float" style={{ animationDelay: '0.3s' }} />
+      <div className="absolute top-[30%] left-[40%] w-16 h-16 bg-[radial-gradient(circle,_#c084fc_0%,_#ec4899_50%,_transparent_100%)] opacity-50 rounded-full blur-lg animate-float" style={{ animationDelay: '1.8s' }} />
+      <div className="absolute bottom-[30%] right-[40%] w-44 h-44 bg-[radial-gradient(circle,_#06b6d4_0%,_#3b82f6_50%,_transparent_100%)] opacity-30 rounded-full blur-[100px] animate-float" style={{ animationDelay: '2.5s' }} />
       
       <div className="max-w-4xl mx-auto space-y-6 relative z-10">
         <div className="text-center space-y-4 animate-fade-in">

@@ -100,17 +100,17 @@ const PriceCalculator = () => {
           </p>
         </div>
 
-        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#8E6EFF]/40 backdrop-blur-[25px] bg-slate-900/60 shadow-[0_0_30px_rgba(142,110,255,0.3)]">
-          <CardHeader className="bg-gradient-to-r from-[#8E6EFF]/25 via-[#41C7F4]/20 to-[#38E0B7]/25 border-b border-white/30">
-            <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              <BarChart3 className="w-7 h-7 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]" strokeWidth={2.5} /> Dane produktu
+        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#8E6EFF]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(142,110,255,0.3)]">
+          <CardHeader className="bg-gradient-to-r from-[#8E6EFF]/15 via-[#41C7F4]/10 to-[#38E0B7]/15 border-b border-white/25">
+            <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
+              <BarChart3 className="w-7 h-7 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" strokeWidth={2.5} /> Dane produktu
             </CardTitle>
-            <CardDescription className="text-white/90 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
+            <CardDescription className="text-white/85 font-medium drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Wprowadź cenę netto zakupu i wybierz stawkę VAT</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6 pt-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="netPrice" className="text-white font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Cena netto z faktury (PLN)</Label>
+                <Label htmlFor="netPrice" className="text-white font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Cena netto z faktury (PLN)</Label>
                 <Input
                   id="netPrice"
                   type="number"
@@ -119,14 +119,14 @@ const PriceCalculator = () => {
                   onChange={(e) => setNetPrice(e.target.value)}
                   min="0"
                   step="0.01"
-                  className="bg-slate-800/60 border-white/40 text-white placeholder:text-white/60 backdrop-blur-sm focus:bg-slate-800/70 transition-all"
+                  className="bg-white/25 border-white/35 text-white placeholder:text-white/55 backdrop-blur-sm focus:bg-white/30 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="vatRate" className="text-white font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Wybierz stawkę VAT</Label>
+                <Label htmlFor="vatRate" className="text-white font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Wybierz stawkę VAT</Label>
                 <Select value={vatRate} onValueChange={setVatRate}>
-                  <SelectTrigger id="vatRate" className="bg-slate-800/60 border-white/40 text-white backdrop-blur-sm">
+                  <SelectTrigger id="vatRate" className="bg-white/25 border-white/35 text-white backdrop-blur-sm">
                     <SelectValue placeholder="Wybierz VAT" />
                   </SelectTrigger>
                   <SelectContent>
@@ -138,13 +138,13 @@ const PriceCalculator = () => {
             </div>
 
             {calculations && (
-              <div className="pt-4 border-t border-white/30">
-                <div className="bg-gradient-to-r from-slate-800/70 to-slate-800/60 rounded-2xl p-6 border border-white/40 backdrop-blur-sm shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+              <div className="pt-4 border-t border-white/25">
+                <div className="bg-gradient-to-r from-white/30 to-white/20 rounded-2xl p-6 border border-white/35 backdrop-blur-sm shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                   <div className="flex justify-between items-center flex-wrap gap-2">
-                    <span className="text-lg font-bold text-white flex items-center gap-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                      <DollarSign className="w-6 h-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" strokeWidth={2.5} /> Cena Brutto (Twój koszt):
+                    <span className="text-lg font-bold text-white flex items-center gap-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
+                      <DollarSign className="w-6 h-6 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" strokeWidth={2.5} /> Cena Brutto (Twój koszt):
                     </span>
-                    <span className="text-3xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{formatCurrency(calculations.grossCost)}</span>
+                    <span className="text-3xl font-extrabold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">{formatCurrency(calculations.grossCost)}</span>
                   </div>
                 </div>
               </div>
@@ -153,31 +153,31 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#41C7F4]/40 backdrop-blur-[25px] bg-slate-900/60 shadow-[0_0_30px_rgba(65,199,244,0.3)]">
-            <CardHeader className="bg-gradient-to-r from-[#41C7F4]/25 via-[#38E0B7]/20 to-[#8E6EFF]/25 border-b border-white/30">
-              <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                <TrendingUp className="w-7 h-7 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]" strokeWidth={2.5} /> Scenariusze cenowe
+          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#41C7F4]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(65,199,244,0.3)]">
+            <CardHeader className="bg-gradient-to-r from-[#41C7F4]/15 via-[#38E0B7]/10 to-[#8E6EFF]/15 border-b border-white/25">
+              <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
+                <TrendingUp className="w-7 h-7 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" strokeWidth={2.5} /> Scenariusze cenowe
               </CardTitle>
-              <CardDescription className="text-white/90 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
+              <CardDescription className="text-white/85 font-medium drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Porównaj różne marże i wybierz optymalną cenę dla Allegro</CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow className="border-white/30 hover:bg-slate-800/40">
-                      <TableHead className="font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Zakładany Zysk (Narzut)</TableHead>
-                      <TableHead className="font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Cena do wystawienia na Allegro</TableHead>
-                      <TableHead className="font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Pobrana Prowizja (15%)</TableHead>
-                      <TableHead className="font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">Zysk (w zł)</TableHead>
+                    <TableRow className="border-white/25 hover:bg-white/10">
+                      <TableHead className="font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Zakładany Zysk (Narzut)</TableHead>
+                      <TableHead className="font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Cena do wystawienia na Allegro</TableHead>
+                      <TableHead className="font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Pobrana Prowizja (15%)</TableHead>
+                      <TableHead className="font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Zysk (w zł)</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {calculations.scenarios.map((scenario, index) => (
-                      <TableRow key={index} className="hover:bg-slate-800/40 transition-colors border-white/30">
-                        <TableCell className="font-bold text-lg text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{scenario.markupLabel}</TableCell>
-                        <TableCell className="font-extrabold text-xl text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{formatCurrency(scenario.allegroPrice)}</TableCell>
-                        <TableCell className="text-white font-bold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{formatCurrency(scenario.commissionPln)}</TableCell>
-                        <TableCell className="text-white font-extrabold text-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">{formatCurrency(scenario.profitPln)}</TableCell>
+                      <TableRow key={index} className="hover:bg-white/15 transition-colors border-white/25">
+                        <TableCell className="font-bold text-lg text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">{scenario.markupLabel}</TableCell>
+                        <TableCell className="font-extrabold text-xl text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">{formatCurrency(scenario.allegroPrice)}</TableCell>
+                        <TableCell className="text-white font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">{formatCurrency(scenario.commissionPln)}</TableCell>
+                        <TableCell className="text-white font-extrabold text-xl drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">{formatCurrency(scenario.profitPln)}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -188,11 +188,11 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card className="shadow-2xl border-2 border-[#38E0B7]/40 backdrop-blur-[25px] bg-slate-900/60 shadow-[0_0_30px_rgba(56,224,183,0.3)]">
+          <Card className="shadow-2xl border-2 border-[#38E0B7]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(56,224,183,0.3)]">
             <CardContent className="py-12">
               <div className="text-center space-y-3">
-                <Target className="w-16 h-16 mx-auto text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" strokeWidth={2.5} />
-                <p className="text-lg text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
+                <Target className="w-16 h-16 mx-auto text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]" strokeWidth={2.5} />
+                <p className="text-lg text-white font-bold drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">Wprowadź cenę netto, aby zobaczyć obliczenia</p>
               </div>
             </CardContent>
           </Card>

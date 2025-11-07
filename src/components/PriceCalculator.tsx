@@ -56,17 +56,27 @@ const PriceCalculator = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden py-8 px-4 bg-gradient-to-br from-[#FF5DA2] via-[#8E6EFF] via-[#41C7F4] via-[#38E0B7] via-[#FFD873] to-[#FF9A5A]">
-      {/* Colorful bokeh light elements */}
-      <div className="absolute top-[8%] left-[12%] w-32 h-32 rounded-full bg-[#FF5DA2] opacity-60 blur-[80px] animate-float" />
-      <div className="absolute top-[15%] right-[18%] w-40 h-40 rounded-full bg-[#41C7F4] opacity-50 blur-[90px] animate-float" style={{ animationDelay: '0.5s' }} />
-      <div className="absolute top-[25%] left-[35%] w-24 h-24 rounded-full bg-[#FFD873] opacity-70 blur-[60px] animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-[45%] right-[25%] w-36 h-36 rounded-full bg-[#8E6EFF] opacity-55 blur-[85px] animate-float" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute bottom-[20%] left-[20%] w-48 h-48 rounded-full bg-[#38E0B7] opacity-45 blur-[100px] animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-[35%] right-[15%] w-28 h-28 rounded-full bg-[#FF9A5A] opacity-65 blur-[70px] animate-float" style={{ animationDelay: '0.8s' }} />
-      <div className="absolute top-[55%] left-[45%] w-20 h-20 rounded-full bg-[#FF5DA2] opacity-75 blur-[50px] animate-float" style={{ animationDelay: '1.2s' }} />
-      <div className="absolute bottom-[45%] left-[8%] w-32 h-32 rounded-full bg-[#41C7F4] opacity-60 blur-[75px] animate-float" style={{ animationDelay: '2.3s' }} />
-      <div className="absolute top-[35%] right-[8%] w-44 h-44 rounded-full bg-[#8E6EFF] opacity-40 blur-[95px] animate-float" style={{ animationDelay: '0.3s' }} />
-      <div className="absolute bottom-[10%] right-[35%] w-36 h-36 rounded-full bg-[#FFD873] opacity-55 blur-[80px] animate-float" style={{ animationDelay: '1.8s' }} />
+      {/* Colorful bokeh light elements - więcej fioletu, błękitu i turkusu */}
+      <div className="absolute top-[8%] left-[12%] w-40 h-40 rounded-full bg-[#8E6EFF] opacity-70 blur-[80px] animate-float" />
+      <div className="absolute top-[15%] right-[18%] w-48 h-48 rounded-full bg-[#41C7F4] opacity-65 blur-[90px] animate-float" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute top-[25%] left-[35%] w-32 h-32 rounded-full bg-[#38E0B7] opacity-75 blur-[70px] animate-float" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-[45%] right-[25%] w-44 h-44 rounded-full bg-[#8E6EFF] opacity-60 blur-[85px] animate-float" style={{ animationDelay: '1.5s' }} />
+      <div className="absolute bottom-[20%] left-[20%] w-52 h-52 rounded-full bg-[#38E0B7] opacity-55 blur-[100px] animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-[35%] right-[15%] w-36 h-36 rounded-full bg-[#41C7F4] opacity-70 blur-[75px] animate-float" style={{ animationDelay: '0.8s' }} />
+      <div className="absolute top-[55%] left-[45%] w-28 h-28 rounded-full bg-[#8E6EFF] opacity-80 blur-[60px] animate-float" style={{ animationDelay: '1.2s' }} />
+      <div className="absolute bottom-[45%] left-[8%] w-40 h-40 rounded-full bg-[#41C7F4] opacity-65 blur-[80px] animate-float" style={{ animationDelay: '2.3s' }} />
+      <div className="absolute top-[35%] right-[8%] w-48 h-48 rounded-full bg-[#38E0B7] opacity-60 blur-[95px] animate-float" style={{ animationDelay: '0.3s' }} />
+      <div className="absolute bottom-[10%] right-[35%] w-36 h-36 rounded-full bg-[#8E6EFF] opacity-70 blur-[85px] animate-float" style={{ animationDelay: '1.8s' }} />
+      <div className="absolute top-[18%] left-[60%] w-32 h-32 rounded-full bg-[#41C7F4] opacity-75 blur-[70px] animate-float" style={{ animationDelay: '0.7s' }} />
+      <div className="absolute bottom-[28%] right-[45%] w-40 h-40 rounded-full bg-[#38E0B7] opacity-65 blur-[90px] animate-float" style={{ animationDelay: '1.4s' }} />
+      <div className="absolute top-[65%] left-[25%] w-36 h-36 rounded-full bg-[#8E6EFF] opacity-60 blur-[80px] animate-float" style={{ animationDelay: '2.1s' }} />
+      <div className="absolute bottom-[15%] left-[50%] w-28 h-28 rounded-full bg-[#41C7F4] opacity-70 blur-[65px] animate-float" style={{ animationDelay: '0.4s' }} />
+      <div className="absolute top-[40%] left-[15%] w-44 h-44 rounded-full bg-[#38E0B7] opacity-55 blur-[95px] animate-float" style={{ animationDelay: '1.6s' }} />
+      
+      {/* Dodatkowe akcenty kolorystyczne */}
+      <div className="absolute top-[5%] right-[35%] w-24 h-24 rounded-full bg-[#FF5DA2] opacity-60 blur-[60px] animate-float" style={{ animationDelay: '0.9s' }} />
+      <div className="absolute bottom-[40%] right-[5%] w-28 h-28 rounded-full bg-[#FFD873] opacity-65 blur-[70px] animate-float" style={{ animationDelay: '1.7s' }} />
+      <div className="absolute top-[70%] right-[25%] w-32 h-32 rounded-full bg-[#FF9A5A] opacity-60 blur-[75px] animate-float" style={{ animationDelay: '2.2s' }} />
       
       {/* Central bright glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-white opacity-20 blur-[150px]" />
@@ -90,8 +100,8 @@ const PriceCalculator = () => {
           </p>
         </div>
 
-        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/30 backdrop-blur-[25px] bg-white/15">
-          <CardHeader className="bg-gradient-to-r from-white/10 to-white/5 border-b border-white/20">
+        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#8E6EFF]/40 backdrop-blur-[25px] bg-white/15 shadow-[0_0_30px_rgba(142,110,255,0.3)]">
+          <CardHeader className="bg-gradient-to-r from-[#8E6EFF]/15 via-[#41C7F4]/10 to-[#38E0B7]/15 border-b border-white/20">
             <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold">
               <BarChart3 className="w-7 h-7 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]" strokeWidth={2.5} /> Dane produktu
             </CardTitle>
@@ -143,8 +153,8 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/30 backdrop-blur-[25px] bg-white/15">
-            <CardHeader className="bg-gradient-to-r from-white/10 to-white/5 border-b border-white/20">
+          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#41C7F4]/40 backdrop-blur-[25px] bg-white/15 shadow-[0_0_30px_rgba(65,199,244,0.3)]">
+            <CardHeader className="bg-gradient-to-r from-[#41C7F4]/15 via-[#38E0B7]/10 to-[#8E6EFF]/15 border-b border-white/20">
               <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold">
                 <TrendingUp className="w-7 h-7 text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]" strokeWidth={2.5} /> Scenariusze cenowe
               </CardTitle>
@@ -178,7 +188,7 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card className="shadow-2xl border border-white/30 backdrop-blur-[25px] bg-white/15">
+          <Card className="shadow-2xl border-2 border-[#38E0B7]/40 backdrop-blur-[25px] bg-white/15 shadow-[0_0_30px_rgba(56,224,183,0.3)]">
             <CardContent className="py-12">
               <div className="text-center space-y-3">
                 <Target className="w-16 h-16 mx-auto text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]" strokeWidth={2.5} />

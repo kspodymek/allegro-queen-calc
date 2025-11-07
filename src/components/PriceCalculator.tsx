@@ -100,7 +100,7 @@ const PriceCalculator = () => {
           </p>
         </div>
 
-        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#8E6EFF]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(142,110,255,0.3)]">
+        <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#8E6EFF]/30 backdrop-blur-[25px] bg-gradient-to-br from-[#8E6EFF]/25 via-[#41C7F4]/20 to-[#8E6EFF]/15 shadow-[0_0_30px_rgba(142,110,255,0.3)]">
           <CardHeader className="bg-gradient-to-r from-[#8E6EFF]/15 via-[#41C7F4]/10 to-[#38E0B7]/15 border-b border-white/25">
             <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
               <BarChart3 className="w-7 h-7 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" strokeWidth={2.5} /> Dane produktu
@@ -153,7 +153,7 @@ const PriceCalculator = () => {
         </Card>
 
         {calculations && (
-          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#41C7F4]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(65,199,244,0.3)]">
+          <Card className="shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-[#41C7F4]/30 backdrop-blur-[25px] bg-gradient-to-br from-[#41C7F4]/25 via-[#8E6EFF]/20 to-[#41C7F4]/15 shadow-[0_0_30px_rgba(65,199,244,0.3)]">
             <CardHeader className="bg-gradient-to-r from-[#41C7F4]/15 via-[#38E0B7]/10 to-[#8E6EFF]/15 border-b border-white/25">
               <CardTitle className="text-2xl flex items-center gap-2 text-white font-bold drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">
                 <TrendingUp className="w-7 h-7 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" strokeWidth={2.5} /> Scenariusze cenowe
@@ -188,7 +188,7 @@ const PriceCalculator = () => {
         )}
 
         {!calculations && (
-          <Card className="shadow-2xl border-2 border-[#38E0B7]/30 backdrop-blur-[25px] bg-white/20 shadow-[0_0_30px_rgba(56,224,183,0.3)]">
+          <Card className="shadow-2xl border-2 border-[#38E0B7]/30 backdrop-blur-[25px] bg-gradient-to-br from-[#8E6EFF]/20 via-[#41C7F4]/15 to-[#38E0B7]/20 shadow-[0_0_30px_rgba(56,224,183,0.3)]">
             <CardContent className="py-12">
               <div className="text-center space-y-3">
                 <Target className="w-16 h-16 mx-auto text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]" strokeWidth={2.5} />
